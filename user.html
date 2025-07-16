@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gas Booking - User Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <h2>Welcome, <span id="userName"></span></h2>
+        <button id="logout">Logout</button>
+        <h3>Book a Cylinder</h3>
+        <form id="bookingForm">
+            <input type="number" id="cylinders" placeholder="Number of Cylinders" min="1" required>
+            <select id="paymentMethod">
+                <option value="cod">Cash on Delivery</option>
+                <option value="paytm">Paytm QR</option>
+            </select>
+            <button type="submit">Book Now</button>
+        </form>
+        <div id="paytmQR" style="display:none;">
+            <img src="paytm-qr.png" alt="Paytm QR Code" width="200">
+        </div>
+        <h3>My Booking History</h3>
+        <ul id="bookingHistory"></ul>
+        <h3>Account Balance</h3>
+        <p id="balance"></p>
+    </div>
+    <script type="module" src="user.js"></script>
+</body>
+
+</html>
